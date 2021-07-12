@@ -1,0 +1,32 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2012                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _269d0ffd5c-20210619 OPENFOAM=2012 patch=210618
+Arch   : "LSB;label=32;scalar=64"
+Exec   : flattenMesh
+Date   : Jul 04 2021
+Time   : 16:15:26
+Host   : pop-os
+PID    : 498149
+I/O    : uncollated
+Case   : /home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+bounding box: min = (0 0 -0.002) max = (0.200000002980232 0.100000001490116 0) metres.
+Writing points into directory "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/constant/polyMesh"
+
+
+End
+

@@ -1,0 +1,121 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                |
+| \\      /  F ield         | cfMesh: A library for mesh generation          | 
+|  \\    /   O peration     |                                                |
+|   \\  /    A nd           | Author: Franjo Juretic                         | 
+|    \\/     M anipulation  | E-mail: franjo.juretic@c-fields.com            |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version   2.0;
+    format    ascii;
+    class     dictionary;
+    location  "system";
+    object    meshDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+surfaceFile "body_geometry_rev1.fms";
+
+maxCellSize 0.001;
+
+boundaryCellSize 0.001;
+boundaryCellSizeRefinementThickness 0.001;
+
+minCellSize 0.0002;
+
+// Refinement around patches
+/*localRefinement
+{
+    "patch_3_0"
+    {
+        additionalRefinementLevels 3;
+        refinementThickness 0.01;
+    }    
+}*/ 
+
+// Surface Refinement using surface mesh
+/*surfaceMeshRefinement
+{
+    box_and_cylinder
+    {
+        surfaceFile "MeshRefinement001.stl";        
+        additionalRefinementLevels 2;
+        refinementThickness 0.005;  
+    }
+}*/
+
+// Volume Refinement
+objectRefinements
+{
+    
+    box_refinement
+    {
+        type box;
+        cellSize 0.0005;
+        centre (0.125 0.05 0.001);
+        lengthX 0.15;
+        lengthY 0.04;
+        lengthZ 0.02;
+    }
+    
+    cylinder_refinement
+    {
+        type cone;
+        cellSize 0.0005;
+        p0 (0.05 0.05 0);
+        p1 (0.05 0.05 0.002);
+        radius0 0.02;
+        radius1 0.02;
+        
+    }
+} 
+
+// Boundary layers
+boundaryLayers
+{
+    // Boundary layers on patches
+    patchBoundaryLayers
+    {   
+    	"patch_3_0"
+    	{
+        nLayers 5;
+        thicknessRatio 1.25;
+        maxFirstLayerThickness 0.0002; 
+        }
+    }
+    
+    optimiseLayer 1;
+    untangleLayers 1;
+    
+    optimisationParameters
+    {
+        nSmoothNormals 3;
+        maxNumIterations 3;
+        featureSizeFactor 0.4;
+        recalculationNormals 1;
+        reThicknessTol 0.1;
+    }
+}
+
+// Rename boundaries
+renameBoundary
+{
+    newPatchNames
+    {
+        "patch_3_.*" {newName wall; type wall;}
+        "patch_4_.*" {newName inlet; type patch;}
+        "patch_5_.*" {newName outlet; type patch;}
+        "patch_6_.*" {newName open; type patch;}
+        "patch_7_.*" {newName open001; type patch;}
+    }
+    
+    defaultName emptyWalls;
+    defaultType empty;
+
+}
+               
+     
+// ************************************************************************* //

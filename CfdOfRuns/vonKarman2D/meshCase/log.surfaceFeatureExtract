@@ -1,0 +1,85 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2012                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _269d0ffd5c-20210619 OPENFOAM=2012 patch=210618
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceFeatureExtract
+Date   : Jul 04 2021
+Time   : 16:13:40
+Host   : pop-os
+PID    : 498110
+I/O    : uncollated
+Case   : /home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+Note: Feature line extraction only valid on closed manifold surfaces
+
+Reading surfaceFeatureExtractDict
+
+Surfaces     : Body_Geometry.stl
+Output       : Body_Geometry
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 144 in 7 region(s)
+Vertices     : 72
+Bounding Box : (0 0 0) (0.200000002980232 0.100000001490116 0.0020000000949949)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+
+Initial Feature set:
+    points : 8
+    edges  : 76
+    of which
+        region edges   : 76
+        external edges : 0
+        internal edges : 0
+
+Final Feature set:
+    points : 72
+    of which
+        convex             : 8
+        concave            : 0
+        mixed              : 0
+        non-feature        : 64
+    edges  : 76
+    of which
+        external edges     : 76
+        internal edges     : 0
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/constant/extendedFeatureEdgeMesh/Body_Geometry.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/constant/extendedFeatureEdgeMesh/Body_Geometry"
+Writing 8 convex feature points to "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/constant/extendedFeatureEdgeMesh/Body_Geometry_convexFeaturePts.obj"
+Writing 0 concave feature points to "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/constant/extendedFeatureEdgeMesh/Body_Geometry_concaveFeaturePts.obj"
+Writing 0 mixed feature points to "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/constant/extendedFeatureEdgeMesh/Body_Geometry_mixedFeaturePts.obj"
+Writing 0 mixed feature point structure to "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/constant/extendedFeatureEdgeMesh/Body_Geometry_mixedFeaturePtsStructure.obj"
+Writing 76 external edges to "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/constant/extendedFeatureEdgeMesh/Body_Geometry_externalEdges.obj"
+Writing 0 internal edges to "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/constant/extendedFeatureEdgeMesh/Body_Geometry_internalEdges.obj"
+Writing 0 flat edges to "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/constant/extendedFeatureEdgeMesh/Body_Geometry_flatEdges.obj"
+Writing 0 open edges to "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/constant/extendedFeatureEdgeMesh/Body_Geometry_openEdges.obj"
+Writing 0 multiple edges to "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/constant/extendedFeatureEdgeMesh/Body_Geometry_multipleEdges.obj"
+Writing 76 region edges to "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/constant/extendedFeatureEdgeMesh/Body_Geometry_regionEdges.obj"
+Writing 76 edge directions to "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/constant/extendedFeatureEdgeMesh/Body_Geometry_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/constant/triSurface/Body_Geometry.eMesh"
+ExecutionTime = 0 s  ClockTime = 0 s
+
+End
+

@@ -1,0 +1,99 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2012                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _269d0ffd5c-20210619 OPENFOAM=2012 patch=210618
+Arch   : "LSB;label=32;scalar=64"
+Exec   : createPatch -overwrite
+Date   : Jul 04 2021
+Time   : 04:11:44
+Host   : pop-os
+PID    : 480484
+I/O    : uncollated
+Case   : /home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/case
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Reading "system/createPatchDict"
+
+Adding new patch constraint as patch 8 from 
+{
+    type            empty;
+}
+
+Adding new patch constraint001 as patch 9 from 
+{
+    type            empty;
+}
+
+Adding new patch wall as patch 10 from 
+{
+    type            wall;
+}
+
+Adding new patch inlet as patch 11 from 
+{
+    type            patch;
+}
+
+Adding new patch outlet as patch 12 from 
+{
+    type            patch;
+}
+
+Adding new patch open as patch 13 from 
+{
+    type            patch;
+}
+
+Adding new patch open001 as patch 14 from 
+{
+    type            patch;
+}
+
+Patch 'defaultFaces' already exists.  Only moving patch faces - type will remain the same
+
+Moving faces from patch patch_1_0 to patch 8
+Moving faces from patch patch_2_0 to patch 9
+Moving faces from patch patch_3_0 to patch 10
+Moving faces from patch patch_4_0 to patch 11
+Moving faces from patch patch_5_0 to patch 12
+Moving faces from patch patch_6_0 to patch 13
+Moving faces from patch patch_7_0 to patch 14
+--> FOAM Warning : 
+    From const Foam::HashTable<Foam::List<int> >& Foam::polyBoundaryMesh::groupPatchIDs() const
+    in file meshes/polyMesh/polyBoundaryMesh/polyBoundaryMesh.C at line 510
+    Removed patchGroup 'wall' which clashes with patch 10 of the same name.
+--> FOAM Warning : 
+    From Foam::labelHashSet Foam::polyBoundaryMesh::patchSet(const Foam::UList<Foam::wordRe>&, bool, bool) const
+    in file meshes/polyMesh/polyBoundaryMesh/polyBoundaryMesh.C at line 896
+    Cannot find any patch or group names matching "patch_0_.*"
+
+Doing topology modification to order faces.
+
+Not synchronising points.
+
+Removing patches with no faces in them.
+
+Removing zero-sized patch patch_1_0 type empty at position 1
+Removing zero-sized patch patch_2_0 type empty at position 2
+Removing zero-sized patch patch_3_0 type wall at position 3
+Removing zero-sized patch patch_4_0 type wall at position 4
+Removing zero-sized patch patch_5_0 type wall at position 5
+Removing zero-sized patch patch_6_0 type wall at position 6
+Removing zero-sized patch patch_7_0 type wall at position 7
+Removing patches.
+Writing repatched mesh to 0
+
+End
+

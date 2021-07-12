@@ -1,0 +1,60 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2012                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    location    "0";
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+
+internalField   uniform (0.025 -0.005 0.01);
+
+boundaryField
+{
+    wall
+    {
+        type            movingWallVelocity;
+        value           uniform (0 0 0);
+    }
+    inlet
+    {
+        type            flowRateInletVelocity;
+        massFlowRate    constant 2;
+        rhoInlet        1.2;
+        extrapolateProfile false;
+        value           nonuniform List<vector> 0();
+    }
+    outlet
+    {
+        type            pressureInletOutletVelocity;
+        value           nonuniform List<vector> 0();
+    }
+    defaultFaces
+    {
+        type            slip;
+    }
+    procBoundary3to0
+    {
+        type            processor;
+        value           uniform (0.025 -0.005 0.01);
+    }
+    procBoundary3to2
+    {
+        type            processor;
+        value           uniform (0.025 -0.005 0.01);
+    }
+}
+
+
+// ************************************************************************* //

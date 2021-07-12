@@ -1,0 +1,47 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2012                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _269d0ffd5c-20210619 OPENFOAM=2012 patch=210618
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceMeshExtract mesh_outside.stl
+Date   : Jul 04 2021
+Time   : 16:15:27
+Host   : pop-os
+PID    : 498155
+I/O    : uncollated
+Case   : /home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Extracting surface from boundaryMesh ...
+
+Including all processor patches.
+
+Reading mesh from time 0
+Create polyMesh for time = 0
+
+--> FOAM Warning : 
+    From static Foam::instantList Foam::timeSelector::select0(Foam::Time&, const Foam::argList&)
+    in file db/Time/timeSelector.C at line 258
+    No time specified or available, selecting 'constant'
+Time [0] = constant
+surfZone 0 : patch_5_0
+surfZone 1 : patch_3_0
+surfZone 2 : defaultFaces
+surfZone 3 : patch_7_0
+surfZone 4 : patch_4_0
+surfZone 5 : patch_2_0
+surfZone 6 : patch_1_0
+surfZone 7 : patch_6_0
+Writing merged surface to "/home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase/mesh_outside.stl"
+End
+

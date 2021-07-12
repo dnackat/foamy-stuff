@@ -1,0 +1,99 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2012                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _269d0ffd5c-20210619 OPENFOAM=2012 patch=210618
+Arch   : "LSB;label=32;scalar=64"
+Exec   : changeDictionary
+Date   : Jul 04 2021
+Time   : 16:15:19
+Host   : pop-os
+PID    : 498137
+I/O    : uncollated
+Case   : /home/dileepn/FreeCAD/CfdOfRuns/vonKarman2D/meshCase
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Read dictionary changeDictionaryDict with replacements for dictionaries 1(boundary)
+Reading polyMesh/boundary file to extract patch names
+Loaded dictionary boundary with entries 8(defaultFaces patch_1_0 patch_2_0 patch_3_0 patch_4_0 patch_5_0 patch_6_0 patch_7_0)
+Extracted patch groups:
+    group empty with patches 1(defaultFaces)
+    group wall with patches 7(patch_1_0 patch_2_0 patch_3_0 patch_4_0 patch_5_0 patch_6_0 patch_7_0)
+Replacing entries in dictionary boundary
+Special handling of boundary as polyMesh/boundary file.
+Merging entries from 2(patch_1_0 patch_2_0)
+fieldDict:
+{
+    defaultFaces
+    {
+        type            empty;
+        inGroups        1 ( empty );
+        nFaces          53880;
+        startFace       1262599;
+    }
+    patch_1_0
+    {
+        type            empty;
+        inGroups        1 ( wall );
+        nFaces          40720;
+        startFace       1316479;
+    }
+    patch_2_0
+    {
+        type            empty;
+        inGroups        1 ( wall );
+        nFaces          40726;
+        startFace       1357199;
+    }
+    patch_3_0
+    {
+        type            wall;
+        inGroups        1 ( wall );
+        nFaces          224;
+        startFace       1397925;
+    }
+    patch_4_0
+    {
+        type            wall;
+        inGroups        1 ( wall );
+        nFaces          200;
+        startFace       1398149;
+    }
+    patch_5_0
+    {
+        type            wall;
+        inGroups        1 ( wall );
+        nFaces          452;
+        startFace       1398349;
+    }
+    patch_6_0
+    {
+        type            wall;
+        inGroups        1 ( wall );
+        nFaces          400;
+        startFace       1398801;
+    }
+    patch_7_0
+    {
+        type            wall;
+        inGroups        1 ( wall );
+        nFaces          400;
+        startFace       1399201;
+    }
+}
+
+Writing modified boundary
+
+End
+
